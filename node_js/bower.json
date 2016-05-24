@@ -1,0 +1,21 @@
+{
+  "name": "node_js",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "aswathyd <aswathyd@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/aswathyd/Node.js-Express",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3"
+  }
+}
