@@ -1,0 +1,30 @@
+//-var list = ['1','2','3','4']
+html
+    head
+        //- bower:css
+        //- endbower 
+        //- bower:js
+        script(src='/lib/jquery/dist/jquery.js')
+        script(src='/lib/bootstrap/dist/js/bootstrap.js')
+        //- endbower
+        //- inject:css
+        
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        
+        link(rel="stylesheet", href="/css/styles.css")
+        
+        //- endinject
+        //- inject:js
+        
+        script(src="/js/app.js")
+        
+        script(src="/js/bootstrap.min.js")
+        
+        //- endinject
+        title MyApp
+    body(class=["MyClass"])
+        h1(id=["MyId"]) My App
+        h3 sub heading 
+        ul 
+            each val in list
+                li= val
