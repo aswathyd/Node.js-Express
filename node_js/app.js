@@ -2,7 +2,7 @@ var express = require('express'); //gives refrence to express
 
 var app = express(); //instance of espress
 
-var port = 5000; //port that express listen on you machine
+var port = process.env.PORT || 5000; //port that express listen on you machine
 
 //set the public directory as static
 app.use(express.static('public'));
