@@ -1,4 +1,4 @@
-var express = require('express')//gives refrence to express
+var express = require('express'); //gives refrence to express
 
 var app = express(); //instance of espress
 
@@ -9,14 +9,13 @@ app.use(express.static('public'));
 app.use(express.static('src/views'));
 
 //route
-app.get('/',function(req,res){
-        res.send('hello world')
-        });
+app.get('/', function (req, res) {
+    res.send('hello world');
+});
 
-app.get('/books',function(req,res){
-        res.send('hello Books')
-        });
-app.listen(port,function(err){
-           console.log('runing port' + port);
-           });
-
+app.get('/books', function (req, res) {
+    res.send('hello Books');
+});
+app.listen(port, function (err) {
+    console.log('runing port' + port);
+});
