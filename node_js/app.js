@@ -1,7 +1,6 @@
 var express = require('express'); //gives refrence to express
 
 var app = express(); //instance of espress
-var sql = require('mssql');
 
 var port = process.env.PORT || 5000; //port that express listen on you machine
 
@@ -15,6 +14,8 @@ var nav =[{
 
 
 var bookRouter = require('./src/routes/bookRoutes')(nav);
+var adminRouter = require('./src/routes/adminRoutes')(nav);
+
 
 //set the public directory as static
 app.use(express.static('public'));
@@ -23,6 +24,8 @@ app.set('views', './src/views');
 app.set('view engine','ejs');
 
 app.use('/Books',bookRouter);
+app.use('/Admin',adminRouter);
+
 //var handlebars = require('express-handlebars');
 //app.engine('.hbs', handlebars({extname: '.hbs'}));
 //
